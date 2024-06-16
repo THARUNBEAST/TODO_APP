@@ -1,6 +1,6 @@
 export const getTodos = async () => {
     try {
-        const response = await fetch('https://todo-jtuk.onrender.com');
+        const response = await fetch('https://todo-backend-gef3.onrender.com');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -14,7 +14,7 @@ export const getTodos = async () => {
 export const addTodo = async (todo) => {
     const pojo = { todo };
     try {
-        const response = await fetch('https://todo-jtuk.onrender.com', {
+        const response = await fetch('https://todo-backend-gef3.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ export const addTodo = async (todo) => {
 export const editTodo = async (id, todo) => {
     const pojo = { todo };
     try {
-        const response = await fetch(`https://todo-jtuk.onrender.com/${id}`, {
+        const response = await fetch(`https://todo-backend-gef3.onrender.com/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ export const editTodo = async (id, todo) => {
 
 export const deleteTodo = async (id) => {
     try {
-        const response = await fetch(`https://todo-jtuk.onrender.com/${id}`, {
+        const response = await fetch(`https://todo-backend-gef3.onrender.com/${id}`, {
             method: 'DELETE'
         });
         return response.ok;

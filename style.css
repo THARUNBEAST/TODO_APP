@@ -52,7 +52,7 @@ h1{
 
 input{
     width: 100%;
-   
+   min-width:50%;
     height: 40px;
     border-radius: 3px;
     border: none;
